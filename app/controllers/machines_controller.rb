@@ -5,5 +5,7 @@ class MachinesController < ApplicationController
 
   def show
     @machine = Machine.find(params[:id])
+    @snacks = @machine.snacks if !(@snacks.nil?)
+    @snacks
   end
 end
